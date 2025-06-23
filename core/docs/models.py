@@ -12,3 +12,6 @@ class Document(models.Model):
     def __str__(self):
         return f"{self.title} (UUID: {self.uuid} - {self.send_to}"
     
+class Pay(models.Model):
+    uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    
